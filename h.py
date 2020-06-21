@@ -1,12 +1,14 @@
-def lcm_gcd(a, b):
-    c = a*b
-    while a != 0 and b != 0:
-        if a > b:
-            a = a % b
-        else:
-            b = b % a
-    return (c//(a+b))+a+b
-
+def gcd(a, b):
+    if (b == 0):
+        return a
+    elif(a==0):
+        return b
+    elif(a>b):
+        return gcd(b, a%b)
+    else:
+        return gcd(a, b%a)
+def lcm(a,b):
+    return a*b//gcd(a, b)
 a = int(input())
 b = int(input())
-print (lcm_gcd(a, b))
+print (gcd(a, b)+lcm(a, b))

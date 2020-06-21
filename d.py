@@ -6,4 +6,4 @@ while i < n:
     a, b, c = b, c, d
     i += 1
  
-print(d)
+print(c)

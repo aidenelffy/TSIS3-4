@@ -8,8 +8,8 @@ def div(n):
 n = int(input())
 m = n % 10
 if div(n) % m == 0:
-    print("YES")
-else: print("NO")
+    print("Yes")
+else: print("No")
 
 
 
